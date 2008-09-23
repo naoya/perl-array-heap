@@ -75,9 +75,7 @@ sub down_heap {
 
 sub swap {
     my ($x, $y) = @_;
-    my $tmp = $$x;
-    $$x = $$y;
-    $$y = $tmp;
+    ($$x, $$y) = ($$y, $$x);
 }
 
 1;
